@@ -1,9 +1,13 @@
 package com.haha.haha.dto;
 
+import lombok.Data;
+
+@Data
 public class GithubUser {
     private  String name;
     private  Long id;
     private String bio;
+    private String avatar_url;
 
     public String getName() {
         return name;
@@ -29,12 +33,11 @@ public class GithubUser {
         this.bio = bio;
     }
 
-    @Override
-    public String toString() {
-        return "GithubUser{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", bio='" + bio + '\'' +
-                '}';
+    public String getAvatar_url() {
+        return avatar_url;
+    }
+
+    public void setAvatar_url(String avatar_url) {
+        this.avatar_url = avatar_url;
     }
 }
